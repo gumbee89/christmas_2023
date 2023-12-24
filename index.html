@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎄Merry Christmas SunJae🎁</title>
+<!-- Original Open Sans Font -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<!-- Added Christmas-themed Font -->
+<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .card {
+    width: 400px;
+    height: 600px;
+    perspective: 1000px;
+    position: relative;
+  }
+  .card-page {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .card-front, .card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .card-front {
+    background-image: url('https://media.discordapp.net/attachments/1188375538545463308/1188375611601862767/bear_santa_2.png?ex=659a4c08&is=6587d708&hm=86075c1fbc2d05f274a1aada074c819503a3081b089860f68f58301bedb0488e&=&format=webp&quality=lossless&width=662&height=662');
+    background-position: center;
+    background-size: cover;
+  }
+  .card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+  }
+  .left-page {
+    z-index: 2;
+    transform-origin: left;
+  }
+  .right-page {
+    transform-origin: right;
+    /* Applying Christmas-themed background and font */
+    background-image: url('https://media.discordapp.net/attachments/1188375538545463308/1188387634414882918/edited_background.png?ex=659a573b&is=6587e23b&hm=5453cf1bc8198a1302c9e0bcc4b83f1f253714f173d2620c56ee174f463e9364&=&format=webp&quality=lossless&width=662&height=662'); /* Replace with your chosen image URL */
+    background-size: cover;
+    font-family: 'Mountains of Christmas', cursive; /* Christmas-themed font */
+    color: #800020; /* Adjust for better readability #003366 deep blue  #800020  burgundy */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text lines within the flex item */
+    height: 100%; /* Full height of the card */
+  }
+  .card.is-opened .left-page {
+    transform: rotateY(-145deg);
+  }
+  .card.is-opened .right-page {
+    transform: rotateY(0deg);
+  }
+  .content-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Take up full height of the parent container */
+    background: rgba(255, 255, 255, 0.3);
+    padding: 1rem;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+</style>
+  <!-- Include jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Include Snowfall.js Library -->
+  <script src="https://raw.githubusercontent.com/Cople/Snowfall.js/master/snowfall.js"></script>
+</head>
+<body>
+
+<div class="card" onclick="this.classList.toggle('is-opened');">
+  <div class="card-page left-page">
+    <div class="card-front"></div>
+  </div>
+  <div class="card-page right-page">
+    <div class="right-page">
+
+    <div class="content-container">
+    <h1 class="text-2xl font-bold mb-4">Merry Christmas, SunJae!!</h1>
+    <p class="mb-4">The simple things are the most extraordinary,and just having you and our daughters is enough to make this season special.</p>
+    <p class="mb-4">Here's to the happy moments, and the smiles we share. <br> May they continue to be our greatest gifts to each other.</p>
+    <p class="mb-4">Looking forward to another year of memories with <br> You, Lina, and Bona. Let's make it beautiful.</p>
+    <p class="mb-4">With love,</p>
+    <p class="mb-4"><b>Gee Bum</b></p>
+    <p class="mb-4"><b>2023.12.25</b></p>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+<script>
+  $(document).ready(function() {
+    $('.content-container').css('display', 'flex');
+  });
+</script>
+
+
+</script>
+
+</body>
+</html>
